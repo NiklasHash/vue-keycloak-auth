@@ -17,7 +17,7 @@
       <v-btn text to="/admin">
         Admin
       </v-btn>
-      <v-btn text>
+      <v-btn text @click="logout">
         Logout
       </v-btn>
     </v-app-bar>
@@ -36,5 +36,10 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    logout() {
+      this.$keycloak.logout();
+    }
+  }
 };
 </script>
